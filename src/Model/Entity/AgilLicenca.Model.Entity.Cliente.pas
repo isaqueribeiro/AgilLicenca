@@ -36,7 +36,7 @@ type
       procedure SetNumero(const Value: String);
       procedure SetUF(const Value: String);
     public
-      [Campo('cd_cliente'), Pk, AutoInc]
+      [Campo('id_cliente'), Pk, AutoInc]
       property Id : Int64 read FId write SetId;
       [Campo('nm_razao'), NotNull]
       property Razao : String read FRazao write SetRazao;

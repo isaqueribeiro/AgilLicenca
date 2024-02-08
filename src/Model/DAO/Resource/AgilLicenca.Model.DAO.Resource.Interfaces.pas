@@ -34,6 +34,27 @@ type
     procedure Disconnect;
   end;
 
+  IServico<T : class> = interface
+    ['{BEA17ED3-96A1-4B2C-AA1F-DDD20EA985A6}']
+    function CampoChave(aValue : String) : IServico<T>; overload;
+    function CampoChave : String; overload;
+    function ListarTodos : IServico<T>;
+    function ListarPorId(aId : String) : IServico<T>; overload;
+    function ListarPorId(aId : Int64) : IServico<T>; overload;
+    function ListarPor(aField : String; aValue : Variant) : IServico<T>; overload;
+    function ListarPor(aField : String; aValue : String) : IServico<T>; overload;
+    function ListarPor(aField : String; aValue : Int64) : IServico<T>; overload;
+    function Inserir : IServico<T>;
+    function Atualizar : IServico<T>;
+    function Excluir(aField : String; aValue : String) : IServico<T>; overload;
+    function Excluir : IServico<T>; overload;
+    function IsEmpty : Boolean;
+    function DataSetAsJsonArray : TJsonArray;
+    function DataSetAsJsonObject : TJsonObject;
+    function Entity : T;
+    function List : TObjectList<T>;
+  end;
+
   IFactory = interface
     ['{5E9FFEF8-AFBE-423E-BB4B-DA745040D231}']
     function Configuracao : IConfiguracao;
