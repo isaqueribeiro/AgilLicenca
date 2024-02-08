@@ -1,0 +1,19 @@
+{
+	"name": "src",
+	"description": "Controle de Licenças",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/academiadocodigo/simpleorm": "^2.02.11",
+		"https://github.com/gabrielbaltazar/gbjson": "^1.0.11",
+		"https://github.com/hashload/handle-exception": "^0.1.9",
+		"https://github.com/hashload/horse": "^3.1.5",
+		"https://github.com/hashload/horse-cors": "^1.0.6",
+		"https://github.com/hashload/horse-jwt": "^2.0.14",
+		"https://github.com/hashload/jhonson": "^1.1.8",
+		"https://github.com/viniciussanchez/bcrypt": "^1.0.8",
+		"https://github.com/viniciussanchez/dataset-serialize": "^v2.5.6"
+	}
+}
