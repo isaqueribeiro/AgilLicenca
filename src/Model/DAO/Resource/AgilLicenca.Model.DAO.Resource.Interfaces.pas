@@ -47,6 +47,7 @@ type
     function Inserir : IServico<T>;
     function Atualizar : IServico<T>;
     function Excluir(aField : String; aValue : String) : IServico<T>; overload;
+    function Excluir(aField : String; aValue : Int64) : IServico<T>; overload;
     function Excluir : IServico<T>; overload;
     function IsEmpty : Boolean;
     function DataSetAsJsonArray : TJsonArray;
