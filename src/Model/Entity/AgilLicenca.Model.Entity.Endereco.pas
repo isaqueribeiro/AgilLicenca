@@ -63,6 +63,9 @@ implementation
 
 { TEnderecoCliente }
 
+uses
+  AgilLicenca.Classe.ServiceFormat;
+
 procedure TEnderecoCliente.SetAtivo(const Value: Smallint);
 begin
   FAtivo := IfThen(Value = 1, 1, 0);
@@ -75,7 +78,7 @@ end;
 
 procedure TEnderecoCliente.SetCep(const Value: String);
 begin
-  FCep := Value;
+  FCep := TServiceFormat.FormatCep(Value);
 end;
 
 procedure TEnderecoCliente.SetCidade(const Value: Int64);

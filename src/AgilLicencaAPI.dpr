@@ -18,7 +18,8 @@ uses
   AgilLicenca.Model.DAO.Resource.ServicoFireDAC in 'Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.ServicoFireDAC.pas',
   AgilLicenca.Model.DAO.Service.Interfaces in 'Model\DAO\Service\AgilLicenca.Model.DAO.Service.Interfaces.pas',
   AgilLicenca.Model.Entity.Cliente in 'Model\Entity\AgilLicenca.Model.Entity.Cliente.pas',
-  AgilLicenca.Model.Entity.Endereco in 'Model\Entity\AgilLicenca.Model.Entity.Endereco.pas';
+  AgilLicenca.Model.Entity.Endereco in 'Model\Entity\AgilLicenca.Model.Entity.Endereco.pas',
+  AgilLicenca.Classe.ServiceUtils in 'Classe\AgilLicenca.Classe.ServiceUtils.pas';
 
 procedure InicializarHorse;
 begin

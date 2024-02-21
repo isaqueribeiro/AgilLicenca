@@ -197,6 +197,7 @@
         <DCCReference Include="Model\DAO\Service\AgilLicenca.Model.DAO.Service.Interfaces.pas"/>
         <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Cliente.pas"/>
         <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Endereco.pas"/>
+        <DCCReference Include="Classe\AgilLicenca.Classe.ServiceUtils.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -10,13 +10,13 @@ type
   [Tabela('TAB_CLIENTES')]
   TCliente = class
     private
-      FCnpj: String;
+      FCpfCnpj: String;
       FFantasia: String;
       FId: Int64;
       FRazao: String;
       FAtivo: Smallint;
 
-      procedure SetCnpj(const Value: String);
+      procedure SetCpfCnpj(const Value: String);
       procedure SetFantasia(const Value: String);
       procedure SetId(const Value: Int64);
       procedure SetRazao(const Value: String);
@@ -28,13 +28,18 @@ type
       property Razao : String read FRazao write SetRazao;
       [Campo('nm_fantasia')]
       property Fantasia : String read FFantasia write SetFantasia;
-      [Campo('nr_cnpj'), NotNull]
-      property Cnpj : String read FCnpj write SetCnpj;
+      [Campo('nr_cpfcnpj'), NotNull]
+      property CpfCnpj : String read FCpfCnpj write SetCpfCnpj;
       [Campo('sn_ativo'), NotNull]
       property Ativo : Smallint read FAtivo write SetAtivo;
   end;
 
 implementation
+
+uses
+  AgilLicenca.Classe.ServiceUtils,
+  AgilLicenca.Classe.ServiceFormat,
+  AgilLicenca.Classe.ServiceValidate;
 
 { TCliente }
 
@@ -46,14 +51,20 @@ begin
     FAtivo := 0;
 end;
 
-procedure TCliente.SetCnpj(const Value: String);
+procedure TCliente.SetCpfCnpj(const Value: String);
 begin
-  FCnpj := Value;
+  if TServiceValidate.IsCpf(Value) then
+    FCpfCnpj := TServiceFormat.FormatCpf(Value)
+  else
+  if TServiceValidate.IsCnpj(Value) then
+    FCpfCnpj := TServiceFormat.FormatCnpj(Value)
+  else
+    FCpfCnpj := TServiceUtils.OnlyNumbers(Value);
 end;
 
 procedure TCliente.SetFantasia(const Value: String);
 begin
-  FFantasia := Value.Trim.ToUpper;
+  FFantasia := TServiceUtils.SanitizeString(Value.Trim.ToUpper, false);
 end;
 
 procedure TCliente.SetId(const Value: Int64);
@@ -63,7 +74,7 @@ end;
 
 procedure TCliente.SetRazao(const Value: String);
 begin
-  FRazao := Value.Trim.ToUpper;
+  FRazao := TServiceUtils.SanitizeString(Value.Trim.ToUpper, false);
 end;
 
 end.
