@@ -61,8 +61,7 @@ end;
 
 class function TServiceFormat.FormatText(Mask, Value: String): String;
 begin
-  Result := IfThen((not Mask.Trim.IsEmpty) and (not Value.Trim.IsEmpty),
-    FormatMaskText(Mask, Value), Value);
+  Result := IfThen((not Mask.Trim.IsEmpty) and (not Value.Trim.IsEmpty), FormatMaskText(Mask, Value), Value);
 end;
 
 end.

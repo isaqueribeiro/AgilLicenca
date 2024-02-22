@@ -188,6 +188,11 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Classe\AgilLicenca.Classe.ServiceUtils.pas"/>
+        <DCCReference Include="Classe\AgilLicenca.Classe.ServiceValidate.pas"/>
+        <DCCReference Include="Classe\AgilLicenca.Classe.ServiceFormat.pas"/>
+        <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Cliente.pas"/>
+        <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Endereco.pas"/>
         <DCCReference Include="Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.Interfaces.pas"/>
         <DCCReference Include="Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.Configuracao.pas"/>
         <DCCReference Include="Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.ConexaoFireDAC.pas"/>
@@ -195,9 +200,8 @@
         <DCCReference Include="Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.ConexaoPool.pas"/>
         <DCCReference Include="Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.ServicoFireDAC.pas"/>
         <DCCReference Include="Model\DAO\Service\AgilLicenca.Model.DAO.Service.Interfaces.pas"/>
-        <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Cliente.pas"/>
-        <DCCReference Include="Model\Entity\AgilLicenca.Model.Entity.Endereco.pas"/>
-        <DCCReference Include="Classe\AgilLicenca.Classe.ServiceUtils.pas"/>
+        <DCCReference Include="Model\DAO\Service\AgilLicenca.Model.DAO.Service.Cliente.pas"/>
+        <DCCReference Include="Model\DAO\Service\AgilLicenca.Model.DAO.Service.Factory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

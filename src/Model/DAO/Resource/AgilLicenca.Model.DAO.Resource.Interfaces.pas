@@ -62,6 +62,7 @@ type
     function Conexao(aConfiguracao : IConfiguracao) : IConexao;
   end;
 
+
 implementation
 
 end.

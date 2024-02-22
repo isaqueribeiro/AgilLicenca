@@ -37,5 +37,5 @@ Este projeto utiliza o [`boss`](https://github.com/HashLoad/boss) como gerenciad
 
 ## Licença
 
-**`Ágil Licenças`** é um software gratuito e de código aberto licenciado sob a [MIT](https://choosealicense.com/licenses/mit/)
+**`Ágil Licenças`** é um software gratuito e de código aberto licenciado sob a licença [MIT](https://choosealicense.com/licenses/mit/)
 

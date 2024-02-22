@@ -6,6 +6,7 @@ uses
   System.SysUtils,
   System.StrUtils,
   System.Classes,
+
   FireDAC.Stan.Intf,
   FireDAC.Stan.Option,
   FireDAC.Stan.Error,
@@ -29,7 +30,9 @@ uses
   FireDAC.Phys.FB,
   FireDAC.Comp.DataSet,
   FireDAC.Comp.Client,
+
   Data.DB,
+
   AgilLicenca.Model.DAO.Resource.Interfaces;
 
 type

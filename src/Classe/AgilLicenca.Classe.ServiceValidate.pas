@@ -3,12 +3,14 @@ unit AgilLicenca.Classe.ServiceValidate;
 interface
 
 uses
-  System.SysUtils;
+  System.SysUtils,
+  System.RegularExpressions;
 
 type
   TServiceValidate = class
     class function IsCnpj(Value : String) : Boolean;
     class function IsCpf(Value : String) : Boolean;
+    class function IsEmail(Value : String): Boolean;
   end;
 
 implementation
@@ -110,6 +112,37 @@ begin
 
     Result := (IntToStr (Dv1) = Valor[10]) and (IntToStr (Dv2) = Valor[11]);
   end;
+end;
+
+class function TServiceValidate.IsEmail(Value: String): Boolean;
+var
+  aExpressao : TRegEx;
+begin
+  Result := False;
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.com$|^[^@]+@[^.]+.com.br$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.org$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.net$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.site$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.online$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.store$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.tech$)');
+
+  if not Result then
+    Result := aExpressao.IsMatch(Value, '(^[^@]+@[^.]+.edu$)');
 end;
 
 end.

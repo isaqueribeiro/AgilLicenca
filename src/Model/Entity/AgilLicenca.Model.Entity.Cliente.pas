@@ -15,12 +15,14 @@ type
       FId: Int64;
       FRazao: String;
       FAtivo: Smallint;
+      FEmail: String;
 
       procedure SetCpfCnpj(const Value: String);
       procedure SetFantasia(const Value: String);
       procedure SetId(const Value: Int64);
       procedure SetRazao(const Value: String);
       procedure SetAtivo(const Value: Smallint);
+      procedure SetEmail(const Value: String);
     public
       [Campo('id_cliente'), Pk, AutoInc]
       property Id : Int64 read FId write SetId;
@@ -30,6 +32,8 @@ type
       property Fantasia : String read FFantasia write SetFantasia;
       [Campo('nr_cpfcnpj'), NotNull]
       property CpfCnpj : String read FCpfCnpj write SetCpfCnpj;
+      [Campo('ds_email'), NotNull]
+      property Email : String read FEmail write SetEmail;
       [Campo('sn_ativo'), NotNull]
       property Ativo : Smallint read FAtivo write SetAtivo;
   end;
@@ -60,6 +64,11 @@ begin
     FCpfCnpj := TServiceFormat.FormatCnpj(Value)
   else
     FCpfCnpj := TServiceUtils.OnlyNumbers(Value);
+end;
+
+procedure TCliente.SetEmail(const Value: String);
+begin
+  FEmail := Value.Trim.ToLower;
 end;
 
 procedure TCliente.SetFantasia(const Value: String);
