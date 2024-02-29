@@ -23,7 +23,9 @@ uses
   AgilLicenca.Model.DAO.Resource.ServicoFireDAC in 'Model\DAO\Resource\AgilLicenca.Model.DAO.Resource.ServicoFireDAC.pas',
   AgilLicenca.Model.DAO.Service.Interfaces in 'Model\DAO\Service\AgilLicenca.Model.DAO.Service.Interfaces.pas',
   AgilLicenca.Model.DAO.Service.Cliente in 'Model\DAO\Service\AgilLicenca.Model.DAO.Service.Cliente.pas',
-  AgilLicenca.Model.DAO.Service.Factory in 'Model\DAO\Service\AgilLicenca.Model.DAO.Service.Factory.pas';
+  AgilLicenca.Model.DAO.Service.Factory in 'Model\DAO\Service\AgilLicenca.Model.DAO.Service.Factory.pas',
+  AgilLicenca.Controller.Interfaces in 'Controller\AgilLicenca.Controller.Interfaces.pas',
+  AgilLicenca.Controller.Cliente in 'Controller\AgilLicenca.Controller.Cliente.pas';
 
 procedure InicializarHorse;
 begin

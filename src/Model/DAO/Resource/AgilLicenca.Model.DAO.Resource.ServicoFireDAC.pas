@@ -53,7 +53,8 @@ type
       function DataSetAsJsonArray : TJsonArray;
       function DataSetAsJsonObject : TJsonObject;
       function Entity : T;
-      function List : TObjectList<T>;
+      function List(Value : TObjectList<T>) : IServico<T>; overload;
+      function List : TObjectList<T>; overload;
   end;
 
 implementation
@@ -147,6 +148,12 @@ end;
 function TServicoFireDAC<T>.List: TObjectList<T>;
 begin
   Result := FList;
+end;
+
+function TServicoFireDAC<T>.List(Value: TObjectList<T>): IServico<T>;
+begin
+  Result := Self;
+  FList := Value;
 end;
 
 function TServicoFireDAC<T>.ListarPor(aField: String; aValue: Int64): IServico<T>;

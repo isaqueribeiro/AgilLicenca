@@ -3,7 +3,7 @@
 
 Sistema/Servidor REST para o gerenciamento de licenças.
 
-Através deste recurso a entidade (softhouse) possuirá um serviços REST para gerenciar sua lista de clientes assocciada a gestão de licenças de suas aplicações desenvolvidas.
+Através deste recurso a entidade (softhouse) possuirá serviços REST para gerenciar sua lista de clientes associada a gestão de licenças de suas aplicações desenvolvidas.
 
 
 ## Dependências

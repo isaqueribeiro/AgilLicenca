@@ -53,7 +53,8 @@ type
     function DataSetAsJsonArray : TJsonArray;
     function DataSetAsJsonObject : TJsonObject;
     function Entity : T;
-    function List : TObjectList<T>;
+    function List(Value : TObjectList<T>) : IServico<T>; overload;
+    function List : TObjectList<T>; overload;
   end;
 
   IFactory = interface
